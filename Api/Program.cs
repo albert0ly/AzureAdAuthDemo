@@ -27,6 +27,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
+            ValidateIssuer = false,
             ValidateAudience = true,
             ValidAudiences = validAudiences,
             // The Authority above pulls metadata (issuer/signing keys). No need to hardcode issuer.
