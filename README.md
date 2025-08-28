@@ -83,3 +83,10 @@ This setup is suitable for C2B scenarios (end users interactively signing in), a
 - Redirect URI mismatch: Confirm the client app registration has `http://localhost` configured under "Mobile and desktop applications".
 - Switching scopes/tenants: Remove `tokencache.json` and sign in again.
 - Personal Microsoft accounts: Ensure both app registrations are configured for "Accounts in any organizational directory and personal Microsoft accounts" if targeting consumers.
+
+## Additions
+
+From https://developer.microsoft.com/en-us/graph/graph-explorer
+
+- Check access token expiration settings
+  GET https://graph.microsoft.com/v1.0/applications/{object-id}/tokenLifetimePolicies
